@@ -26,7 +26,7 @@ public class AddressBook {
 		city = sc.next();
 		System.out.println("Enter the State");
 		state = sc.next();
-		
+
 		contact.setFirstname(firstname);
 		contact.setLastname(lastname);
 		contact.setMobilenumber(mobilenumber);
@@ -34,9 +34,38 @@ public class AddressBook {
 		contact.setCity(city);
 		contact.setState(state);
 		System.out.println("Added Contact successfully");
-		System.out.println(contact);
-	
+		
+
 	}
 
-	
+	public void displayContact() {
+		String firstname1=contact.getFirstname();
+		System.out.println(firstname1);
+		String lastname1 = contact.getLastname();
+		System.out.println(lastname1);
+		int mobilenumber1 = contact.getMobilenumber();
+		System.out.println(mobilenumber1);
+		String email1 = contact.getEmail();
+		System.out.println(email1);
+		String city1 = contact.getCity();
+		System.out.println(city1);
+		String state1 = contact.getState();
+		System.out.println(state1);
+		System.out.println(contact);
+	}
+
+	public void editContact() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Please Enter original Name to Edit");
+		String editName = sc.next();
+		if (editName.equalsIgnoreCase(firstname)) {
+			addcontact();
+		} else {
+			System.out.println("Invalid first name");
+			System.out.println("Please Enter Valid First Name");
+			System.out.println();
+			editContact();
+		}
+	}
+
 }
