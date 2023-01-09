@@ -34,8 +34,6 @@ public class AddressBook {
 		contact.setCity(city);
 		contact.setState(state);
 		System.out.println("Added Contact successfully");
-		
-
 	}
 
 	public void displayContact() {
