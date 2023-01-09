@@ -28,7 +28,6 @@ public class AddressBookMain {
 				System.out.println("Enter the valid choice");
 			}
 		} while (!check);
-
 	}
 
 	public static void main(String[] args) {
